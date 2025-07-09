@@ -35,9 +35,9 @@ app.post("/upload", upload.single("file"), (req, res) => {
   });
 });
 
-// app.listen(3000, () => {
-//   console.log("Server running on http://localhost:3000");
-// });
+app.get("/", (req, res) => {
+  res.send("✅ Node.js + S3 File Upload API is running.");
+});
 
 app.listen(3000, "0.0.0.0", () => {
   console.log("Server running on http://localhost:3000");
